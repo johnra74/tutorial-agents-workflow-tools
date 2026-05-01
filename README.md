@@ -1,4 +1,4 @@
-# Agents, Workflows, and Skills — Source Code
+# Agents, Workflows, and Skills - Source Code
 
 Companion code for the 3-part blog series. Each project is a standalone Spring Boot application.
 
@@ -10,7 +10,7 @@ A bug investigation agent that autonomously searches source files, reads code, a
 **Companion post:** `part1-agents.md`
 
 ### `part1-calculator-target`
-The intentionally buggy calculator project that `part1-bug-agent` investigates. Contains a copy-paste bug in `CalculatorService.add()` — `a - b` instead of `a + b` — along with a test suite that exposes it.
+The intentionally buggy calculator project that `part1-bug-agent` investigates. Contains a copy-paste bug in `CalculatorService.add()` - `a - b` instead of `a + b` — along with a test suite that exposes it.
 
 
 > Note: Will update once Part 2 and Part 3 is completed
@@ -26,7 +26,7 @@ The intentionally buggy calculator project that `part1-bug-agent` investigates. 
 Pull the models used by the projects:
 
 ```bash
-ollama pull qwen2.5-coder   # part1-bug-agent (tool calling)
+ollama pull qwen3   # part1-bug-agent (tool calling)
 ```
 
 ---
@@ -53,7 +53,7 @@ Each project reads from `src/main/resources/application.properties`. At minimum,
 **`part1-bug-agent`**
 ```properties
 langchain4j.ollama.chat-model.base-url=http://localhost:11434
-langchain4j.ollama.chat-model.model-name=qwen2.5-coder
+langchain4j.ollama.chat-model.model-name=qwen3
 project.root=/path/to/part1-calculator-target
 ```
 
@@ -66,5 +66,5 @@ For `part1-bug-agent`, `project.root` must point to the `part1-calculator-target
 ```
 agents/
 ├── part1-bug-agent/            # Agent that investigates bugs
-├── part1-calculator-target/    # Buggy project the agent investigates
+└── part1-calculator-target/    # Buggy project the agent investigates
 ```
