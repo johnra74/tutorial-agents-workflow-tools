@@ -1,6 +1,6 @@
 # Part 1 — Bug Investigation Agent
 
-Companion code for Part 1: Agents - When the Problem Doesn't Have a Roadmap.
+Companion code for **[Part 1: Agents - When the Problem Doesn't Have a Roadmap](https://www.johnra.me/2026/05/01/part-1-agents-when-the-problem-doesnt-have-a-roadmap/)**.
 
 ## Purpose
 
