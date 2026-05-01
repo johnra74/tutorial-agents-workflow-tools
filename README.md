@@ -10,7 +10,7 @@ A bug investigation agent that autonomously searches source files, reads code, a
 **Companion post:** `part1-agents.md`
 
 ### `part1-calculator-target`
-The intentionally buggy calculator project that `part1-bug-agent` investigates. Contains a copy-paste bug in `CalculatorService.add()` - `a - b` instead of `a + b` — along with a test suite that exposes it.
+The intentionally buggy calculator project that `part1-bug-agent` investigates. Contains a copy-paste bug in `CalculatorService.add()` - `a - b` instead of `a + b` - along with a test suite that exposes it.
 
 
 > Note: Will update once Part 2 and Part 3 is completed
