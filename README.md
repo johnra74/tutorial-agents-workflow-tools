@@ -7,13 +7,17 @@ Companion code for the 3-part blog series. Each project is a standalone Spring B
 ### `part1-bug-agent`
 A bug investigation agent that autonomously searches source files, reads code, and runs tests to diagnose a reported defect.
 
-**Companion post:** `part1-agents.md`
+**Companion post:** [Part 1: Agents - When the Problem Doesn't Have a Roadmap](https://www.johnra.me/2026/05/01/part-1-agents-when-the-problem-doesnt-have-a-roadmap/).
 
 ### `part1-calculator-target`
 The intentionally buggy calculator project that `part1-bug-agent` investigates. Contains a copy-paste bug in `CalculatorService.add()` - `a - b` instead of `a + b` - along with a test suite that exposes it.
 
+### `part2-content-pipeline`
+A multi-step content analysis workflow: classification → compliance check → readability scoring → routing → editorial brief. Each step runs in parallel where possible using virtual threads.
 
-> Note: Will update once Part 2 and Part 3 is completed
+** Companion post:** [Part 2: Workflows — When You Know the Steps Before You Start](https://www.johnra.me/2026/05/06/part-2-workflow-when-you-know-the-steps-before-you-start/).
+
+> Note: Will update once Part 3 is completed
 
 ---
 
@@ -59,6 +63,12 @@ project.root=/path/to/part1-calculator-target
 
 For `part1-bug-agent`, `project.root` must point to the `part1-calculator-target` directory (absolute path or relative to where you run the agent). The default relative path `../part1-calculator-target` works if you run from inside the `part1-bug-agent` directory.
 
+**`part2-content-pipeline`**
+```properties
+ollama.base-url=http://localhost:11434
+ollama.model=llama3.1
+```
+
 ---
 
 ## Structure
@@ -66,5 +76,6 @@ For `part1-bug-agent`, `project.root` must point to the `part1-calculator-target
 ```
 agents/
 ├── part1-bug-agent/            # Agent that investigates bugs
-└── part1-calculator-target/    # Buggy project the agent investigates
+├── part1-calculator-target/    # Buggy project the agent investigates
+└── part2-content-pipeline/     # Deterministic content analysis workflow
 ```
