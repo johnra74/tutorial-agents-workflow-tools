@@ -17,8 +17,10 @@ A multi-step content analysis workflow: classification → compliance check → 
 
 ** Companion post:** [Part 2: Workflows — When You Know the Steps Before You Start](https://www.johnra.me/2026/05/06/part-2-workflow-when-you-know-the-steps-before-you-start/).
 
-> Note: Will update once Part 3 is completed
+### `part3-skills-library`
+A reusable skill library (`ClassifySkill`, `SummarizeSkill`, `ExtractStructuredDataSkill`, `PolicyCheckSkill`, `ContentReadinessSkill`) registered in a shared `SkillRegistry` and composable across workflows.
 
+**Companion post:** [Part 3: Skills – Building the Reusable Capabilities That Power Everything Else] (https://www.johnra.me/2026/05/09/part-3-skills-building-the-reusable-capabilities-that-power-everything-else/)
 ---
 
 ## Prerequisites
@@ -77,5 +79,6 @@ ollama.model=llama3.1
 agents/
 ├── part1-bug-agent/            # Agent that investigates bugs
 ├── part1-calculator-target/    # Buggy project the agent investigates
-└── part2-content-pipeline/     # Deterministic content analysis workflow
+├── part2-content-pipeline/     # Deterministic content analysis workflow
+└── part3-skills-library/       # Reusable AI skill components
 ```
